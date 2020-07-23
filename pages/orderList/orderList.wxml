@@ -1,0 +1,18 @@
+<view class="orderlist">
+
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="全部订单">
+        <nav type="0" ></nav>
+        </van-tab>
+        <van-tab title="待付款">
+                 <nav1 type="1" ></nav1>
+        </van-tab>
+        <van-tab title="待收货">
+         <nav1 type="2" ></nav1>
+        </van-tab>
+        <van-tab title="待评价">
+         <nav1 type="3" ></nav1>
+        </van-tab>
+    </van-tabs>
+
+</view>

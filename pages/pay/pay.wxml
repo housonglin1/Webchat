@@ -1,0 +1,67 @@
+<view class="address">
+    <image src="../../image/icon-dw.png" class="iconAddress"></image>
+    <view class="pay_content">
+        
+        <view class="name">
+            <text>李四</text>
+            <text>13088889999</text>
+        </view>
+        <view class="dw">
+            广东省广州市天河区科学城222号
+        </view>
+      
+    </view>
+    <image src="../../image/icon-arrow.png" class="iconArrow"></image>
+    
+</view>
+
+<view class="pay_order">
+<view class="caption">
+    <van-row >
+        <van-col span="6">商品</van-col>
+        <van-col span="10">商品名称</van-col>
+        <van-col span="4">数量</van-col>
+        <van-col span="4">单价</van-col>
+    </van-row>
+</view>
+ <view  class="orderlist">
+        <van-row  wx:for="{{goodsList}}"   wx:key="*this" >
+        <van-col span="6"><image src="{{item.carImage}}" mode="widthFix"></image></van-col>
+        <van-col span="10">
+        <view class="name">
+             {{item.carName}}
+        </view>
+         </van-col>
+        <van-col span="4">
+        <view class="num">
+            {{item.carNum}}
+        </view>
+       
+        </van-col>
+        <van-col span="4">
+        <view class="price">
+        {{item.carPrice}}
+        </view>
+         </van-col>
+      
+    </van-row>
+        </view>
+
+ </view>
+
+<!-- <view class="pay_remarks">
+    <input placeholder="填写备注" type="text"></input>
+</view> -->
+
+
+
+<view class="car_bot">
+    <view class="car_bot_wrap">
+        总价 <text class="car_total_monay">￥{{totalPrice}}</text>
+        <view class="car_order_confirm"  bindtap="getPay">支付</view>
+       
+        <van-dialog id="van-dialog" />
+       
+    </view>
+</view>
+

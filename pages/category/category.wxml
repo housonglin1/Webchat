@@ -1,0 +1,24 @@
+<scroll-view class="categoryitem" scroll-y="true"  style="height:{{scrollHeight}}px">
+        <view class="item" >
+                <view wx:for="{{categoryitem}}" data-id="{{index}}" wx:key="*this" class="{{conId==index?'con':''}}" bindtap="itemclick">
+                {{item.iconText}}
+                </view>
+        </view>
+</scroll-view>
+<!-- 内容区 -->
+<scroll-view class="contentItem" scroll-y="true" style="height:{{scrollHeight}}px">
+        <view class="content"  >
+          <view wx:for="{{goodcontent[conId].con}}"  wx:key="*this" class="  clearfix">
+          <view class="boxlist">
+             <view class="title">{{item.title}}</view>
+              <view class="box"  wx:for="{{item.content}}" wx:key="*this" >
+                 <view class="goodsCon">
+                   <image mode="widthFix" src="{{item.image}}"></image>
+                   <text>{{item.name}}</text>
+                 </view>
+              </view>
+          </view>
+          </view>
+        </view>
+</scroll-view>
+<!-- 内容区end -->

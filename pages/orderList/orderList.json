@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav":"/component/nav/nav",
+    "nav1":"/component/nav1/nav1"
+  }
+ 
+}

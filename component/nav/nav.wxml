@@ -1,0 +1,107 @@
+ <view class="goodCaption">
+            <van-row>
+               <van-col span="5">
+                商品图片
+               </van-col>
+               <van-col span="11" >
+                商品名称
+               </van-col>
+               <van-col span="4">
+               数量
+               </van-col>
+                <van-col span="4" class="priceCaption">
+                  单价
+                </van-col>
+            </van-row>
+  </view>
+<view class="orderlist"  wx:for="{{OrderList}}"  wx:key="*this">
+  <!-- <view class="box" wx:if="{type}=={{item.type}}"> -->
+   <view class="box clearfix" wx:if="{type}=={{item.type}}">
+      
+     <view class="top clearfix"> 
+         <van-row>
+            <van-col span="18">
+            <view>
+            订单时间: 
+               <i>
+                  {{item.orderId}}
+               </i>
+            </view>
+            <view>
+             订单号:
+               <i>
+                 {{item.orderId}}
+               </i>
+            </view> 
+            </van-col>
+            <van-col span="6">
+             <view class="orderType">
+                  {{typelist[item.type-1]}}
+             </view>
+            </van-col>
+      </van-row>
+     
+  
+     </view>
+     <view class="main" wx:for="{{item.goodsList}}"  wx:key="*this">
+          
+           <view class="goods">
+            <van-row>
+               <van-col span="5">
+               <image mode="widthFix" src="{{item.carImage}}">
+               </image>
+               </van-col>
+               <van-col span="11">
+                 <view class="name">
+                 {{item.carName}}
+                 </view>
+               </van-col>
+               <van-col span="4">
+               <view  class="num">
+                  {{item.carNum}}
+               </view>
+               </van-col>
+                <van-col span="4">
+               <view  class="price">
+               {{item.carPrice}}
+                 </view>
+                  
+                </van-col>
+            </van-row>
+           </view>
+     </view>
+      <view class="footer  clearfix">
+       <view class="play">
+       
+         <view class="total">
+               总价: <text>￥{{item.total}}</text>
+         </view>
+           <view wx:if="{{item.type==1}}" class="buttons">
+            <van-button type="primary"   size="mini"  class="btn" bindtap="onPay" data-id="{{item.orderId}}">支付订单</van-button>
+            <van-button type="danger"    size="mini" wx:if="{{item.type==1}}" class="btn" bindtap="onDel" data-id="{{item.orderId}}">取消订单</van-button>
+           </view>
+           <view wx:if="{{item.type==2}}" class="buttons">
+              <van-button type="warning"   size="mini"  class="btn" bindtap="onGood" data-id="{{item.orderId}}">确认收货</van-button>
+              <van-button type="danger"    size="mini" class="btn" bindtap="onRefund" data-id="{{item.orderId}}">售后服务</van-button>
+           
+           </view>
+           <view wx:if="{{item.type==3}}" class="buttons">
+            <van-button type="primary"   size="mini"  class="btn" bindtap="onEnd" data-id="{{item.orderId}}">在线评价</van-button>
+           </view>
+         
+       </view>
+      </view>
+  </view>
+  
+</view>
+
+
+
+
+
+
+
+
+
+
+

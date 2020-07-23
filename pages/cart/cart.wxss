@@ -1,0 +1,108 @@
+/* pages/cart/cart.wxss */
+/* 商品列表 */
+.goods_list{
+        height: 100px;
+        padding-left:100px;
+        position: relative;
+        background: #fff;
+        border: 1px solid #eee;
+        /* margin-top: 10rpx; */
+      }
+      .left {
+        position: absolute;
+        top:10px;
+        left: 10px;
+      }
+      
+      .left image{
+        width: 80px;
+        height: 80px;
+      }
+      
+      .right{
+        padding:10px 0;
+        height: 80px;
+        /* overflow: hidden; */
+      }
+      .goods_name{
+        font-size: 14px
+      }
+      .goods_address{
+        color:#929292;
+        font-size: 12px;
+      }
+      .goods_price{
+        font-size: 14px;
+        color:#F47378;
+        width: 100%;
+        line-height: 22px;
+        height: 22px;
+        margin-top: 5px;
+      }
+      .cart{
+        position: absolute;
+        right: 10px;
+        bottom:8px;
+      }
+      .cart image{
+        width: 20px;
+        height: 20px;
+      }
+    .car_item_operate{
+        position: absolute;
+        bottom:10px;
+        right:50px;
+    }
+    .btn{
+        display: inline-block;
+        width:20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        border: 1px solid #b2b2b2;
+        color:#929292;
+    }
+    
+    .num{
+        display: inline-block;
+        width:20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        border-top:1px solid #b2b2b2;
+        border-bottom:1px solid #b2b2b2;
+        color:#929292;
+    
+    }
+    .car_bot{
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        bottom:0px;
+        /* border-top: 1px solid #e5e5e5; */
+        font-size: 14px;
+    }
+    .car_bot_wrap{
+        padding:10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .car_total_monay{
+        color:#ff0000;
+        margin-left: 5px;
+    }
+    .car_order{
+        float: right;
+        background: #FF7E3A;
+        color:#fff;
+        width: 80px;
+        text-align: center;
+    }
+    .box{
+      text-align: center;
+      margin-top: 200rpx;
+    }
+    .box image{
+      width: 30%;
+    }
+    
